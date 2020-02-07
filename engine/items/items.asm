@@ -575,6 +575,11 @@ ItemUseBall:
 	ld hl, ItemUseBallText08
 .printTransferredToPCText
 	call PrintText
+	ld a, [wNumInBox] ; is box full?
+	cp MONS_PER_BOX
+	jr nz, .done
+	ld hl, BoxFullReminderTXT
+	call PrintText
 	jr .done
 
 .oldManCaughtMon
@@ -2405,6 +2410,10 @@ NoSurfingHereText:
 
 BoxFullCannotThrowBallText:
 	TX_FAR _BoxFullCannotThrowBallText
+	db "@"
+
+BoxFullReminderTXT:
+	TX_FAR _BoxIsFullReminderText
 	db "@"
 
 ItemUseText00:
