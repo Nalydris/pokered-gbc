@@ -533,7 +533,7 @@ AgathaAI:
 	jp c, AISwitchIfEnoughMons
 	cp $80
 	ret nc
-	ld a, 4
+	ld a, 5
 	call AICheckIfHPBelowFraction
 	ret nc
 	jp AIUseFullRestore
