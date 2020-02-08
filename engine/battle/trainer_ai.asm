@@ -468,7 +468,7 @@ MistyAI:
 LtSurgeAI:
 	cp $40
 	ret nc
-	jp AIUseXDefense
+	jp AIUseXDefend
 
 ErikaAI:
 	cp $80
