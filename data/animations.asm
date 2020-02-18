@@ -1057,7 +1057,6 @@ AcidArmorAnim:
 	db $FF
 
 CrabHammerAnim:
-	db SE_WATER_DROPLETS_EVERYWHERE, $38
 	db $46,$97,$05
 	db $06,$FF,$2A
 	db $FF
